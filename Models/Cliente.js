@@ -4,20 +4,20 @@ const { DataTypes } = require("sequelize");
 
 
 const ClienteModel = conexion.define("Cliente", {
-    nombre: {
+    name: {
         type: DataTypes.STRING,
         allowNull: false,
         length: 30
     },
 
-    apellido: {
+    surname: {
         type: DataTypes.STRING,
         allowNull: false,
         length: 30 
     },
 
 
-    celular: {
+    phone: {
         type: DataTypes.STRING,
         allowNull: false,
         length: 30

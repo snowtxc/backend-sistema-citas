@@ -2,6 +2,7 @@ const conexion = require("../database");
 const { DataTypes } = require("sequelize");
 
 const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 
 const UserModel = conexion.define("User", {
@@ -52,8 +53,7 @@ UserModel.prototype.validateUser = async function (email, password, callback) {
             callback(null, false);
         }
     }).catch((error) => {
-        handleFatalError(error);
-        callback(true, null);
+        callback(error, null);
     })
 }
 
