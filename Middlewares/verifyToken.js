@@ -20,16 +20,12 @@ function verifyToken(request, response, next) {
     }
 
     const decoded = jwt.decode(token, 'user_key');
-    
-    console.log(decoded);
-
-
     if (decoded == null) {
         response.status(401).send("No authorization!");
     }
 
     request.userID = decoded;
-    console.log(decoded);
+    
 
     next();
 

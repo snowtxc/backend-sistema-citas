@@ -15,10 +15,14 @@ var CitaController = {
     create: async function (request, response) {
         const body = request.body;
 
+        console.log(body);
+
         const title = body.title;
         const motivo = body.motivo;
         const fecha = body.fecha;
         const clienteID = body.clienteID;
+
+        console.log(fecha);
 
         const USER_ID = request.userID;
 
@@ -78,6 +82,8 @@ var CitaController = {
         const ID_CITA = request.params.id;
 
         const body = request.body;
+
+        
 
         const title = body.title;
         const motivo = body.motivo;

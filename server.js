@@ -3,6 +3,9 @@ var bodyParser = require("body-parser");
 
 
 
+process.env.TZ = "America/Montevideo"; 
+
+
 const app = new express();
 
 //Archivos de rutas

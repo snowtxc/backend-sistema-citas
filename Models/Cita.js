@@ -16,9 +16,8 @@ const ClienteModel = conexion.define("Cita", {
     },
     
     fecha: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        length: 30
+        type: DataTypes.DATE,
+        allowNull: false
     },
 
 })

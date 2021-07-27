@@ -41,9 +41,11 @@ const UserModel = conexion.define("User", {
 })
 
 UserModel.prototype.validateUser = async function (email, password, callback) {
+    console.log(email)
     UserModel.findOne({ where: { email: email } }).then((user) => {
         if (!user) {
             callback(null, false);
+            return;
         }
 
         const succesValidate = bcrypt.compareSync(password, user.password);

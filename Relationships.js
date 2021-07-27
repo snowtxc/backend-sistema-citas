@@ -17,7 +17,7 @@ UserModel.hasMany(CitaModel, { foreignKey: 'UserId' });
 CitaModel.belongsTo(UserModel);
 
 
-ClienteModel.hasMany(CitaModel, { foreignKey: 'ClienteId' });
+ClienteModel.hasMany(CitaModel, { foreignKey: 'ClienteId' ,onDelete: 'cascade',onUpdate: 'cascade'}); 
 CitaModel.belongsTo(ClienteModel);
 
 
